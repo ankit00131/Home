@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reale-state-website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+
+<nav class="hp-navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- LEFT: LOGO -->
+      <div class="hp-logo d-flex align-items-center">
+        <div class="logo-icon">🏠</div>
+        <a href="">Homepress</a>
+      </div>
+
+      <!-- CENTER: MENU -->
+      <ul class="hp-menu d-flex mb-0">
+        <ul class="hp-menu d-flex mb-0">
+
+          <!-- HOME DROPDOWN -->
+          <li class="hp-dropdown">
+            <a href="#">Home</a>
+
+            <ul class="hp-submenu">
+              <li><a href="#">Short Homepage</a></li>
+
+              <li class="has-sub">
+                <a href="#">Classic Homepages</a>
+                <ul class="hp-inner-submenu">
+                  <li><a href="#">Real Estate Agency</a></li>
+                  <li><a href="#">Property Agency</a></li>
+                  <li><a href="#">Splash Image Fullscreen</a></li>
+                  <li><a href="#">Advanced Search Under Banner</a></li>
+                  <li><a href="#">Advanced Search Above Banner</a></li>
+                  <li><a href="#">Single Property</a></li>
+                </ul>
+              </li>
+
+              <li class="has-sub">
+                <a href="#">Home Agent</a>
+                <ul class="hp-inner-submenu">
+                  <li><a href="#">Agent Profile</a></li>
+                  <li><a href="#">Agent Listing</a></li>
+                </ul>
+              </li>
+
+              <li class="has-sub">
+                <a href="#">Homepage Marketplace</a>
+                <ul class="hp-inner-submenu">
+                  <li><a href="#">Marketplace Grid</a></li>
+                  <li><a href="#">Marketplace Fullwidth</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#">Home Property Slider</a></li>
+              <li><a href="#">Home Leads Generation</a></li>
+              <li><a href="#">Property Page Half Map</a></li>
+              <li><a href="#">Property Search Over Image</a></li>
+              <li><a href="#">Brokerage Agency</a></li>
+            </ul>
+          </li>
+
+          <!-- OTHER MENU ITEMS -->
+          <li><a href="#">Listing</a></li>
+          <li><a href="#">Property</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">IDX Pages</a></li>
+
+        </ul>
+      </ul>
+
+      <!-- RIGHT: ACTIONS -->
+      <button class="add-listing-btn" data-bs-toggle="modal" data-bs-target="#authModal">
+        ＋ ADD LISTING
+      </button>
+
+        <div class="icon-badge">
+          🔄 <span>0</span>
+        </div>
+        <div class="icon-badge">
+          ❤️ <span>0</span>
+        </div>
+        <div class="profile-icon">👤</div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="modal fade" id="authModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content auth-modal">
+
+        <div class="modal-body p-0">
+          <div class="row g-0">
+
+            <!-- SIGN IN -->
+            <div class="col-lg-6 auth-left">
+              <h4>Sign in</h4>
+
+              <label>Login</label>
+              <input type="text" placeholder="Enter login">
+
+              <label>Password <a href="#" class="float-end">Forgot?</a></label>
+              <input type="password" placeholder="Enter password">
+
+              <div class="form-check my-3">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Remember me</label>
+              </div>
+
+              <button class="btn btn-light w-100">Sign In</button>
+
+              <div class="demo-box mt-4">
+                <strong>User Login:</strong> demo / demo<br>
+                <strong>Agency Login:</strong> demo_agency / demo_agency
+              </div>
+            </div>
+
+            <!-- REGISTER -->
+            <div class="col-lg-6 auth-right">
+              <h4>Registration</h4>
+
+              <label>Login</label>
+              <input type="text" placeholder="Enter login">
+
+              <label>First name</label>
+              <input type="text" placeholder="Enter first name">
+
+              <label>Last name</label>
+              <input type="text" placeholder="Enter last name">
+
+              <label>Email</label>
+              <input type="email" placeholder="Enter email">
+
+              <label>User role</label>
+              <select>
+                <option>Select user role</option>
+                <option>Agent</option>
+                <option>Agency</option>
+              </select>
+
+              <label>Password</label>
+              <input type="password" placeholder="Enter password">
+
+              <label>Re-enter password</label>
+              <input type="password" placeholder="Re-enter password">
+
+              <button class="btn btn-primary mt-3 float-end">Register</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+<!-- HERO SECTION -->
+<section class="hero-section d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-white">
+        <p class="hero-tag">ALL YOU NEED TO CREATE</p>
+        <h1 class="hero-title">Real Estate Website</h1>
+        <p class="hero-text">
+          With a robust selection of popular properties on hand, as well as
+          leading properties from real estate experts.
+        </p>
+        <a href="#" class="btn hero-btn mt-3">View Details</a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="py-5 property" >
+  <div class="container text-center">
+
+    <h2 class="fw-bold">Properties For Rent</h2>
+    <p class="text-muted mb-5">
+      Search over 2000 properties to rent from the top agents in the country
+    </p>
+
+    <!-- ROW -->
+    <div class="row g-3">
+
+      <!-- CARD 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+            <a href="" class="badge bg-warning text-dark tag ms-5">RENT</a>
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688">
+          </div>
+          <div class="card-body text-start">
+            <h6>Awesome Family Home</h6>
+            <small class="text-muted">1 Bed • 1 Bath • 1200 sqft</small>
+            <p class="price mt-2">$450,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+            <a href="" class="badge bg-warning text-dark tag ms-5">RENT</a>
+            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb">
+          </div>
+          <div class="card-body text-start">
+            <h6>Contemporary Studio</h6>
+            <small class="text-muted">1 Bed • 1 Bath • 1300 sqft</small>
+            <p class="price mt-2">$250,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+          </div>
+          <div class="card-body text-start">
+            <h6>Studio Bay View</h6>
+            <small class="text-muted">1 Bed • 1 Bath • 440 sqft</small>
+            <p class="price mt-2">$180,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+            <a href="" class="badge bg-warning text-dark tag ms-5">RENT</a>>
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+          </div>
+          <div class="card-body text-start">
+            <h6>Studio in Compton</h6>
+            <small class="text-muted">4 Bed • 3 Bath • 5200 sqft</small>
+            <p class="price mt-2">$380,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+            <a href="" class="badge bg-warning text-dark tag ms-5">RENT</a>
+           <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+          </div>
+          <div class="card-body text-start">
+            <h6>Studio in East Orange</h6>
+            <small class="text-muted">4 Bed • 5 Bath • 9800 sqft</small>
+            <p class="price mt-2">$680,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+             <a href="" class="badge bg-warning text-dark tag ms-5">RENT</a>
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+          </div>
+          <div class="card-body text-start">
+            <h6>Studio in Homestead</h6>
+            <small class="text-muted">4 Bed • 4 Bath • 4150 sqft</small>
+            <p class="price mt-2">$475,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+            <a href="" class="badge bg-warning text-dark tag ms-5">RENT</a>
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
+          </div>
+          <div class="card-body text-start">
+            <h6>Studio in Los Angeles</h6>
+            <small class="text-muted">5 Bed • 5 Bath • 6200 sqft</small>
+            <p class="price mt-2">$550,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+          </div>
+          <div class="card-body text-start">
+            <h6>Studio in Maverick</h6>
+            <small class="text-muted">5 Bed • 3 Bath • 4180 sqft</small>
+            <p class="price mt-2">$740,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card property-card">
+          <div class="position-relative">
+            <a href="" class="badge bg-success tag">BUY</a>
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+          </div>
+          <div class="card-body text-start">
+            <h6>Studio on Grand Avenue</h6>
+            <small class="text-muted">1 Bed • 1 Bath • 1150 sqft</small>
+            <p class="price mt-2">$675,000</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div class="mt-5">
+      <button class="btn btn-primary px-4">View more</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="apartment-section py-4 apartment">
+  <div class="container">
+    
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Explore Apartment Types</h2>
+      <p class="text-muted">
+        Explore all the different types of apartments so you can choose the best option for you
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="row g-4">
+
+      <!-- Townhome -->
+      <div class="col-lg-6 col-md-12">
+        <div class="card apartment-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="img-fluid">
+          <div class="card-overlay">
+            <h5>Townhome</h5>
+            <span>20 Properties</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Houses -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card apartment-card">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" class="img-fluid">
+          <div class="card-overlay">
+            <h5>Houses</h5>
+            <span>20 Properties</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offices -->
+      <div class="col-lg-3 col-md-12">
+        <div class="card apartment-card h-100">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36" class="img-fluid h-100">
+          <div class="card-overlay">
+            <h5>Offices</h5>
+            <span>20 Properties</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Studio -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card apartment-card">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" class="img-fluid">
+          <div class="card-overlay">
+            <h5>Houses</h5>
+            <span>20 Properties</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Houses -->
+      <div class="col-lg-6 col-md-12">
+        <div class="card apartment-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="img-fluid">
+          <div class="card-overlay">
+            <h5>Townhome</h5>
+            <span>20 Properties</span>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-lg-3 col-md-12">
+        <div class="card apartment-card h-100">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36" class="img-fluid h-100">
+          <div class="card-overlay">
+            <h5>Offices</h5>
+            <span>20 Properties</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section-bg form">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT FORM -->
+      <div class="col-lg-6 mb-4 left">
+        <div class="form-card mx-auto" style="max-width:420px;">
+          <h4>Real Estate Inquiry Form</h4>
+
+          <div class="mb-3">
+            <label class="form-label">Inquiry Type</label>
+            <select class="form-select">
+              <option>Select value</option>
+              <option>Apartments</option>
+              <option>Offices</option>
+              <option>Houses</option>
+              <option>Studies</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Personal Info</label>
+            <div class="row g-2">
+              <div class="col-4">
+                <select class="form-select">
+                  <option>Select</option>
+                  <option>Buyer</option>
+                  <option>Agent</option>
+                </select>
+              </div>
+              <div class="col-8">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Your email">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">How to address you</label>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Mr</option>
+              <option>Mrs</option>
+            </select>
+          </div>
+
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <input type="text" class="form-control" placeholder="Max price">
+            </div>
+            <div class="col-6">
+              <input type="text" class="form-control" placeholder="Minimum size (Sq Ft)">
+            </div>
+          </div>
+
+          <button class="btn btn-primary w-100">Submit</button>
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-lg-6 text-black">
+        <h1 class="mb-3">Why Choose Us</h1>
+        <p class="mb-4">
+          It’s our job to get you the best price for your home and make sure
+          that you get the best possible deal on the property.
+        </p>
+
+        <div class="why-box">
+          <div class="icon-box">
+            <i class="bi bi-building"></i>
+          </div>
+          <div>
+            <h4>Wide Range of Properties</h4>
+            <p>With a robust selection of popular properties on hand, as well as leading properties from real estate experts.</p>
+          </div>
+        </div>
+
+        <div class="why-box">
+          <div class="icon-box">
+            <i class="bi bi-cash-coin"></i>
+          </div>
+          <div>
+            <h4>Financing Made Easy</h4>
+            <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+          </div>
+        </div>
+
+        <div class="why-box">
+          <div class="icon-box">
+            <i class="bi bi-people"></i>
+          </div>
+          <div>
+            <h4>Trusted by Thousands</h4>
+            <p>10 new offers every day. 350 offers on site, trusted by a community of thousands of users.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 discover">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-semibold">Discover Our Featured Listings</h2>
+      <p class="text-muted">
+        These featured listings contain exclusive real estate opportunities within the city
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <div class="property-img">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" class="card-img-top">
+            <div class="badge-group">
+              <button class="badge bg-success me-1">BUY</button>
+              <button class="badge bg-success">RENT</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Awesome Family Home</h6>
+            <div class="d-flex justify-content-between align-items-center text-muted small">
+              <div>
+                <i class="bi bi-door-open"></i> 1
+                <i class="bi bi-droplet ms-2"></i> 1
+                <i class="bi bi-bounding-box ms-2"></i> 1200 sq ft
+              </div>
+              <div class="price">$450,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <div class="property-img">
+            <img src="https://images.unsplash.com/photo-1502673530728-f79b4cab31b1" class="card-img-top">
+            <div class="badge-group">
+              <button class="badge bg-success me-1">BUY</button>
+              <button class="badge bg-success">RENT</button>
+            </div>
+            <div class="icon-group">
+              <i class="bi bi-eye"></i>
+              <i class="bi bi-house ms-1"></i>
+              <i class="bi bi-heart ms-1"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Contemporary Studio</h6>
+            <div class="d-flex justify-content-between align-items-center text-muted small">
+              <div>
+                <i class="bi bi-door-open"></i> 1
+                <i class="bi bi-droplet ms-2"></i> 1
+                <i class="bi bi-bounding-box ms-2"></i> 1300 sq ft
+              </div>
+              <div class="price">$250,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+          <div class="property-img">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" class="card-img-top">
+            <div class="badge-group">
+              <button class="badge bg-success me-1">BUY</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Studio Bay View</h6>
+            <div class="d-flex justify-content-between align-items-center text-muted small">
+              <div>
+                <i class="bi bi-door-open"></i> 1
+                <i class="bi bi-droplet ms-2"></i> 1
+                <i class="bi bi-bounding-box ms-2"></i> 4400 sq ft
+              </div>
+              <div class="price">$180,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+    <div class="container">
+
+      <!-- Section Title -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Meet Our Agents</h2>
+        <p class="text-muted">
+          Meet our team of professional agents, who will help you find your dream house
+        </p>
+      </div>
+
+      <div class="row text-center g-4">
+
+        <!-- Agent 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="agent-card">
+            <div class="agent-img-box">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Rich Wacksman">
+            </div>
+
+            <h5 class="mt-3 mb-1">Rich Wacksman</h5>
+            <p class="text-muted small">
+              Co-Founder and Executive Chairman
+            </p>
+
+            <div class="agent-contact">
+              <div class="d-flex justify-content-center align-items-start gap-2">
+                <i class="bi bi-telephone"></i>
+                <div class="text-start">
+                  <p class="mb-1">Mobile: <strong>(866) 234-5678</strong></p>
+                  <p class="mb-1">Office: <strong>(879) 822-3301</strong></p>
+                  <p class="mb-1">Fax: <strong>(879) 823-3302</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-icons mt-3">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-twitter mx-2"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-google mx-2"></i>
+              <i class="bi bi-envelope"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agent 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="agent-card">
+            <div class="agent-img-box">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jennifer Barton">
+            </div>
+
+            <h5 class="mt-3 mb-1">Jennifer Barton</h5>
+            <p class="text-muted small">
+              Senior Vice President, Product
+            </p>
+
+            <div class="agent-contact">
+              <div class="d-flex justify-content-center align-items-start gap-2">
+                <i class="bi bi-telephone"></i>
+                <div class="text-start">
+                  <p class="mb-1">Mobile: <strong>(866) 234-5678</strong></p>
+                  <p class="mb-1">Office: <strong>(879) 822-3301</strong></p>
+                  <p class="mb-1">Fax: <strong>(879) 823-3302</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-icons mt-3">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-twitter mx-2"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-google mx-2"></i>
+              <i class="bi bi-envelope"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agent 3 (Highlighted) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="agent-card">
+            <div class="agent-img-box active">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nick Swift">
+            </div>
+
+            <h5 class="mt-3 mb-1">Nick Swift</h5>
+            <p class="text-muted small">
+              Chief Technology Officer
+            </p>
+
+            <div class="agent-contact">
+              <div class="d-flex justify-content-center align-items-start gap-2">
+                <i class="bi bi-telephone"></i>
+                <div class="text-start">
+                  <p class="mb-1">Mobile: <strong>(865) 234-5679</strong></p>
+                  <p class="mb-1">Office: <strong>(875) 822-3356</strong></p>
+                  <p class="mb-1">Fax: <strong>(874) 823-3312</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-icons mt-3">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-twitter mx-2"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-google mx-2"></i>
+              <i class="bi bi-envelope"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agent 4 (Highlighted) -->
+         <div class="col-lg-3 col-md-6">
+          <div class="agent-card">
+            <div class="agent-img-box active">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nick Swift">
+            </div>
+
+            <h5 class="mt-3 mb-1">Nick Swift</h5>
+            <p class="text-muted small">
+              Chief Technology Officer
+            </p>
+
+            <div class="agent-contact">
+              <div class="d-flex justify-content-center align-items-start gap-2">
+                <i class="bi bi-telephone"></i>
+                <div class="text-start">
+                  <p class="mb-1">Mobile: <strong>(865) 234-5679</strong></p>
+                  <p class="mb-1">Office: <strong>(875) 822-3356</strong></p>
+                  <p class="mb-1">Fax: <strong>(874) 823-3312</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-icons mt-3">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-twitter mx-2"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-google mx-2"></i>
+              <i class="bi bi-envelope"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+<footer class="footer">
+  <!-- Top Section -->
+  <div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center border-bottom pb-4 mb-4">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-house-fill fs-3 text-primary"></i>
+        <h4 class="mb-0 text-white fw-bold">homepress</h4>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+
+    
+
+    <!-- Content Section -->
+    <div class="row gy-4">
+      <div class="col-md-3">
+        <h6 class="footer-title">ABOUT</h6>
+        <p>
+          Fusce quis tellus nulla. Donec sodales mauris eget pellentesque hendrerit.
+          Donec molestie non urna sit amet aliquet. Curabitur sit amet est nec nulla
+          varius fermentum.
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="footer-title">CONTACT INFO</h6>
+        <p>
+          Call-centre: 1 (323) 938-5798 <br>
+          Fax: 1 (888) 637-7262 <br>
+          Email: info@stylemixthemes.com
+        </p>
+        <p>
+          1840 E Garvey Avenue Street <br>
+          West Covina, CA 91791, U.S.
+        </p>
+        <p>Monday – Friday: 9:00am – 9:00pm</p>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="footer-title">REAL ESTATE MARKERS</h6>
+        <ul class="footer-links">
+          <li><a href="#">Pricing Plans</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#" class="more-link">More ›</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="footer-title">INFORMATION</h6>
+        <ul class="footer-links">
+          <li><a href="#">Apartment for Rent</a></li>
+          <li><a href="#">Apartment Low to hide</a></li>
+          <li><a href="#">Offices for Buy</a></li>
+          <li><a href="#">Offices for Rent</a></li>
+          <li><a href="#" class="more-link">More ›</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Section -->
+  <div class="footer-bottom text-center py-3">
+    © 2021 HomePress – Real Estate WordPress Theme by StylemixThemes.
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
